@@ -1,0 +1,17 @@
+firewall::rules:
+  '000 allow forwarding to eth0':
+    chain: 'FORWARD'
+    outiface: 'eth0'
+    action: 'accept'
+  '001 allow forwarding from eth0':
+    chain: 'FORWARD'
+    iniface: 'eth0'
+    action: 'accept'
+  '002 masquerade from eth0':
+    table: 'nat'
+    chain: 'POSTROUTING'
+    outiface: 'eth0'
+    jump: 'MASQUERADE'
+  '999 reject all':
+    chain: 'FORWARD'
+    action: 'reject'
