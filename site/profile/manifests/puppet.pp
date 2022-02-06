@@ -1,10 +1,6 @@
 # profile::puppet
 class profile::puppet {
 
-  file { '/etc/puppetlabs/facter':
-    ensure => 'directory',
-  }
-
   class { 'puppetdb':
     report_ttl => '7d',
   }

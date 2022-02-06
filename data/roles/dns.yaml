@@ -1,0 +1,10 @@
+dns::records::a:
+  'router-1':
+    zone: 'jadys.agency'
+    data: '172.16.0.1'
+  'puppet-1':
+    zone: 'jadys.agency'
+    data: '172.16.0.2'
+  'dns-1':
+    zone: 'jadys.agency'
+    data: '172.16.0.3'
